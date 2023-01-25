@@ -9,6 +9,7 @@ RUN apt-get update \
   && tar xzf xpdf-tools-linux-4.04.tar.gz \
   && mv xpdf-tools-linux-4.04/bin64/pdftopng /usr/bin/ \
   && mv xpdf-tools-linux-4.04/bin64/pdfdetach /usr/bin/ \
+  && rm xpdf-tools-linux-4.04.tar.gz \
   # Install npm global to ensure we have correct version (sometimes images will use different ones)
   && npm i npm@8.19.2 -g \
   # Install mongo v5 bin so we can use cli commands
