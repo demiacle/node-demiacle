@@ -18,7 +18,7 @@ RUN apt-get update \
   && echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/6.0 main" | tee /etc/apt/sources.list.d/mongodb-org-6.0.list \
   && apt-get update \
   && apt-get install -y mongodb-org \
-  && mongo --version \
+  && mongosh --version \
   && mongorestore --version \
   # Install tooling dependencies
   && apt-get update \
